@@ -1,0 +1,24 @@
+{
+  "itemGroup.carbonage.main_group": "Carbon Age",
+
+  "item.carbonage.tiny_coal_dust": "Tiny Coal Dust",
+  "item.carbonage.coal_dust": "Coal Dust",
+  "item.carbonage.dense_coal_dust": "Dense Coal Dust",
+  "item.carbonage.carbon_mass": "Carbon Mass",
+  "item.carbonage.carbon_plate": "Carbon Plate",
+  "item.carbonage.dense_carbon_plate": "Dense Carbon Plate",
+  "item.carbonage.mortar_stone": "Mortar Stone",
+  "item.carbonage.mortar_iron": "Mortar Iron",
+  "item.carbonage.mortar_diamond": "Mortar Diamond",
+  "item.carbonage.stone_bowl": "Stone Bowl",
+  "item.carbonage.iron_stick": "Iron Stick",
+  "item.carbonage.mold_empty": "Mold Empty",
+  "item.carbonage.mold_filled": "Mold Filled",
+  "item.carbonage.mold_dried": "Mold Dried",
+  "item.carbonage.empty_cell": "Empty Cell",
+  "item.carbonage.water_cell": "Water Cell",
+
+
+  "block.carbonage.carbon_block": "Carbon Block",
+  "block.carbonage.dense_carbon_block": "Dense Carbon Block"
+}

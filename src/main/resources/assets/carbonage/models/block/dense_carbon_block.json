@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "carbonage:block/dense_carbon_block"
+  }
+}

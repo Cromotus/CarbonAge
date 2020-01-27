@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "carbonage:coal_dust"
+    },
+    {
+      "item": "carbonage:coal_dust"
+    },
+    {
+      "item": "carbonage:coal_dust"
+    },
+    {
+      "item": "carbonage:coal_dust"
+    }
+  ],
+  "result": {
+    "item": "carbonage:dense_coal_dust",
+    "count": 1
+  }
+}

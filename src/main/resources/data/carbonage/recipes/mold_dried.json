@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "carbonage:mold_filled"
+  },
+  "result": "carbonage:mold_dried",
+  "experience": 0.1,
+  "cookingtime": 200
+}

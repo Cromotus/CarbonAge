@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " i ",
+    "iIi",
+    " i "
+  ],
+  "key": {
+    "i": {
+      "item": "carbonage:carbon_mass"
+    },
+    "I": {
+      "item": "carbonage:mold_empty"
+    }
+  },
+  "result": {
+    "item": "carbonage:mold_filled",
+    "count": 1
+  }
+}

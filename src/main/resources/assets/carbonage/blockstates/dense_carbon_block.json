@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "carbonage:block/dense_carbon_block" }
+  }
+}

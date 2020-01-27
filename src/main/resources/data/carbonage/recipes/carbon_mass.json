@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#W#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "carbonage:dense_coal_dust"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "item": "carbonage:carbon_mass",
+    "count": 1
+  }
+}

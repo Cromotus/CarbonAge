@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "carbonage:mold_dried"
+    }
+  ],
+  "result": {
+    "item": "carbonage:carbon_plate",
+    "count": 1
+  }
+}

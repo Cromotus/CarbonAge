@@ -1,0 +1,29 @@
+modLoader="javafml" #mandatory
+loaderVersion="[28,)" #mandatory (28 is current forge version)
+issueTrackerURL="https://www.google.de" #optional
+displayURL="https://www.google.de"
+[[mods]] #mandatory
+    modId="carbonage" #mandatory
+    version="${file.jarVersion}" #mandatory
+    displayName="Carbon Age" #mandatory
+    updateJSONURL="https://www.google.de" #optional
+    displayURL="" #optional
+    logoFile="examplemod.png" #optional
+    authors="Cromotus" #optional
+    description='''
+    This is a mod that adds some simple and some complex things made out of Carbon
+    '''
+
+[[dependencies.carbonage]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[28,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.carbonage]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"
