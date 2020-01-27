@@ -45,9 +45,9 @@ public class CarbonAgeItems {
     public static final Item DENSE_CARBON_PLATE = new Item(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
     //Tools
     //TODO replace Simultaneous Crafts number with config value
-    public static final Item MORTAR_STONE = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1), 1);
-    public static final Item MORTAR_IRON = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1), 5);
-    public static final Item MORTAR_DIAMOND = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1), 10);
+    public static final Item MORTAR_STONE = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1).maxDamage(200), 1);
+    public static final Item MORTAR_IRON = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1).maxDamage(500), 5);
+    public static final Item MORTAR_DIAMOND = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1).maxDamage(1000), 10);
     //Crafting Items
     public static final Item STONE_BOWL = new Item(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
     public static final Item IRON_STICK = new Item(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));

@@ -42,6 +42,8 @@ public class MortarItem extends Item {
         this.simultaneousCrafts = simultaneousCrafts;
     }
 
+    //TODO Add config values to enable or disable each of the methods to get tiny coal dust
+
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         if (!worldIn.isRemote){
@@ -57,5 +59,21 @@ public class MortarItem extends Item {
             }
         }
         return super.onItemRightClick(worldIn, playerIn, handIn);
+    }
+
+    @Override
+    public boolean hasContainerItem(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack itemStack) {
+        if (itemStack.getMaxDamage() == itemStack.getDamage()){
+            return new ItemStack(() -> null);
+        }else{
+            ItemStack newItemStack = itemStack.copy();
+            newItemStack.setDamage(itemStack.getDamage() + 1);
+            return newItemStack;
+        }
     }
 }
