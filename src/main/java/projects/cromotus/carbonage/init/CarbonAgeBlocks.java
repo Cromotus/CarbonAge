@@ -25,22 +25,37 @@
 package projects.cromotus.carbonage.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.IForgeRegistry;
 import projects.cromotus.carbonage.CarbonAge;
+import projects.cromotus.carbonage.block.BasicBlockItem;
 
 @Mod.EventBusSubscriber(modid = CarbonAge.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CarbonAgeBlocks {
 
+    public static final Block CARBON_BLOCK = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.5F, 6F).harvestTool(ToolType.PICKAXE).harvestLevel(2));
+    public static final Block DENSE_CARBON_BLOCK = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.5F, 12F).harvestTool(ToolType.PICKAXE).harvestLevel(3));
+
     @SubscribeEvent
     public static void registerEvent(RegistryEvent.Register<Block> event){
+        final IForgeRegistry<Block> registry = event.getRegistry();
+
+        registry.register(CARBON_BLOCK.setRegistryName("carbon_block"));
+        registry.register(DENSE_CARBON_BLOCK.setRegistryName("dense_carbon_block"));
 
     }
 
     @SubscribeEvent
     public static void registerEventBlockItem(RegistryEvent.Register<Item> event){
+        final IForgeRegistry<Item> registry = event.getRegistry();
+
+        registry.register(new BasicBlockItem(CARBON_BLOCK));
+        registry.register(new BasicBlockItem(DENSE_CARBON_BLOCK));
 
     }
 
