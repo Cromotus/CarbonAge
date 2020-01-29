@@ -24,7 +24,9 @@
 
 package projects.cromotus.carbonage.item;
 
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -32,6 +34,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import projects.cromotus.carbonage.init.CarbonAgeItems;
+
+import java.util.function.Consumer;
 
 public class MortarItem extends Item {
 
@@ -43,17 +47,26 @@ public class MortarItem extends Item {
     }
 
     //TODO Add config values to enable or disable each of the methods to get tiny coal dust
+    //TODO Add tags so every mortar can be used for crafting not just the stone one
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-        if (!worldIn.isRemote){
-            if (handIn == Hand.MAIN_HAND){
-                for (int i = 0; i < simultaneousCrafts; i++){
+        final ItemStack stack = playerIn.getHeldItem(handIn);
+        if (handIn == Hand.MAIN_HAND) {
+            for (int i = 0; i < simultaneousCrafts; i++) {
+                if (stack.getMaxDamage() != stack.getDamage()) {
+                    stack.damageItem(1, playerIn, playerEntity -> {} );
+                } else {
+                    break;
+                }
+                if (!worldIn.isRemote) {
                     //TODO getSlotFor() has an @OnlyIn(Dist.Client). This may result in an error on dedicated servers. Needs testing!!!
                     int index = playerIn.inventory.getSlotFor(new ItemStack(() -> Items.COAL));
-                    if (index != -1){
+                    if (index != -1) {
                         playerIn.inventory.getStackInSlot(index).setCount(playerIn.inventory.getStackInSlot(index).getCount() - 1);
                         playerIn.inventory.addItemStackToInventory(new ItemStack(() -> CarbonAgeItems.COAL_DUST, 1));
+                    } else {
+                        break;
                     }
                 }
             }
@@ -68,9 +81,9 @@ public class MortarItem extends Item {
 
     @Override
     public ItemStack getContainerItem(ItemStack itemStack) {
-        if (itemStack.getMaxDamage() == itemStack.getDamage()){
+        if (itemStack.getMaxDamage() == itemStack.getDamage()) {
             return new ItemStack(() -> null);
-        }else{
+        } else {
             ItemStack newItemStack = itemStack.copy();
             newItemStack.setDamage(itemStack.getDamage() + 1);
             return newItemStack;
