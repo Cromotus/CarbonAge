@@ -60,8 +60,7 @@ public class MortarItem extends Item {
                     break;
                 }
                 if (!worldIn.isRemote) {
-                    //TODO getSlotFor() has an @OnlyIn(Dist.Client). This may result in an error on dedicated servers. Needs testing!!!
-                    int index = playerIn.inventory.getSlotFor(new ItemStack(() -> Items.COAL));
+                    int index = playerIn.inventory.findSlotMatchingUnusedItem(new ItemStack(() -> Items.COAL));
                     if (index != -1) {
                         playerIn.inventory.getStackInSlot(index).setCount(playerIn.inventory.getStackInSlot(index).getCount() - 1);
                         playerIn.inventory.addItemStackToInventory(new ItemStack(() -> CarbonAgeItems.COAL_DUST, 1));
