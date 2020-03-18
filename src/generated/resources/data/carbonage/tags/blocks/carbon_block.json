@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "carbonage:carbon_block",
+    "carbonage:dense_carbon_block"
+  ]
+}

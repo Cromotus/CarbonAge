@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "carbonage:mortar_stone",
+    "carbonage:mortar_iron",
+    "carbonage:mortar_diamond"
+  ]
+}

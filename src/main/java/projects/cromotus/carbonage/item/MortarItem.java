@@ -63,7 +63,7 @@ public class MortarItem extends Item {
                     int index = playerIn.inventory.findSlotMatchingUnusedItem(new ItemStack(() -> Items.COAL));
                     if (index != -1) {
                         playerIn.inventory.getStackInSlot(index).setCount(playerIn.inventory.getStackInSlot(index).getCount() - 1);
-                        playerIn.inventory.addItemStackToInventory(new ItemStack(() -> CarbonAgeItems.COAL_DUST, 1));
+                        playerIn.inventory.addItemStackToInventory(new ItemStack(() -> CarbonAgeItems.TINY_COAL_DUST, 1));
                     } else {
                         break;
                     }
