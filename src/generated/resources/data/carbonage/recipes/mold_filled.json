@@ -1,20 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " i ",
-    "iIi",
-    " i "
+    " C ",
+    "CMC",
+    " C "
   ],
   "key": {
-    "i": {
+    "C": {
       "item": "carbonage:carbon_mass"
     },
-    "I": {
+    "M": {
       "item": "carbonage:mold_empty"
     }
   },
   "result": {
-    "item": "carbonage:mold_filled",
-    "count": 1
+    "item": "carbonage:mold_filled"
   }
 }

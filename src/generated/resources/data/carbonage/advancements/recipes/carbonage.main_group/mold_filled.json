@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "carbonage:mold_filled"
+    ]
+  },
+  "criteria": {
+    "has_mold": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "carbonage:mold_empty"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "carbonage:mold_filled"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mold",
+      "has_the_recipe"
+    ]
+  ]
+}

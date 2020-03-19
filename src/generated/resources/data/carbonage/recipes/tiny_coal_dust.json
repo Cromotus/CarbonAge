@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "tag": "carbonage:mortar"
+    }
+  ],
+  "result": {
+    "item": "carbonage:tiny_coal_dust"
+  }
+}

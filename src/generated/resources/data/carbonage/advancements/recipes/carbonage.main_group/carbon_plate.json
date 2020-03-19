@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "carbonage:carbon_plate"
+    ]
+  },
+  "criteria": {
+    "has_mold_dried": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "carbonage:mold_dried"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "carbonage:carbon_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mold_dried",
+      "has_the_recipe"
+    ]
+  ]
+}

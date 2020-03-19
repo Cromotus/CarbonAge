@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "carbonage:carbon_plate"
+    },
+    {
+      "item": "carbonage:carbon_plate"
+    },
+    {
+      "item": "carbonage:carbon_plate"
+    },
+    {
+      "item": "carbonage:carbon_plate"
+    },
+    {
+      "item": "carbonage:carbon_plate"
+    },
+    {
+      "item": "carbonage:carbon_plate"
+    },
+    {
+      "item": "carbonage:carbon_plate"
+    },
+    {
+      "item": "carbonage:carbon_plate"
+    },
+    {
+      "item": "carbonage:carbon_plate"
+    }
+  ],
+  "result": {
+    "item": "carbonage:dense_carbon_plate"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "carbonage:dense_carbon_plate"
+    ]
+  },
+  "criteria": {
+    "has_carbon_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "carbonage:carbon_plate"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "carbonage:dense_carbon_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_carbon_plate",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,20 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "iii",
-    "R R",
-    "iii"
+    "III",
+    "S S",
+    "III"
   ],
   "key": {
-    "i": {
+    "I": {
       "item": "minecraft:iron_ingot"
     },
-    "R": {
+    "S": {
       "item": "carbonage:iron_stick"
     }
   },
   "result": {
-    "item": "carbonage:mold_empty",
-    "count": 1
+    "item": "carbonage:mold_empty"
   }
 }

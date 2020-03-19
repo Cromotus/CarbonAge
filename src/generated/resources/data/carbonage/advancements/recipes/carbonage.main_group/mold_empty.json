@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "carbonage:mold_empty"
+    ]
+  },
+  "criteria": {
+    "has_iron_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "carbonage:iron_stick"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "carbonage:mold_empty"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_stick",
+      "has_the_recipe"
+    ]
+  ]
+}
