@@ -1,3 +1,9 @@
+2550e863ad5882745097cbe68f7a7d8410a7be59 data\carbonage\advancements\recipes\carbonage.main_group\coal_dust.json
+a0de71be57d2000dc95ccde81884c8f93d755249 data\carbonage\advancements\recipes\carbonage.main_group\mold_dried.json
+ce51d2c02eaa5161ea27a464900a94334d2c54df data\carbonage\advancements\recipes\carbonage.main_group\mortar_stone.json
+c9c9a5f7606f8e8377bd790ee66d907dce7db6ac data\carbonage\recipes\coal_dust.json
+0a49b8ef3425e20b10ec198e9a1c98b2fc338721 data\carbonage\recipes\mold_dried.json
+fa11141187bcf7297d160b42bbebaa9d8c35f8f9 data\carbonage\recipes\mortar_stone.json
 10b4f3f62f68b931329bb6f7f6ced6a5d905b397 data\carbonage\tags\blocks\carbon_block.json
 10b4f3f62f68b931329bb6f7f6ced6a5d905b397 data\carbonage\tags\items\carbon_block.json
 8c52b0f7fe75c56d0119bf7a4711b4d5c5cea1ab data\carbonage\tags\items\mortar.json

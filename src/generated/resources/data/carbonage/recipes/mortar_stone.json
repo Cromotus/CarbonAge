@@ -1,20 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#",
-    "#",
-    "R"
+    "S",
+    "S",
+    "B"
   ],
   "key": {
-    "#": {
+    "S": {
       "item": "minecraft:stone"
     },
-    "R": {
+    "B": {
       "item": "carbonage:stone_bowl"
     }
   },
   "result": {
-    "item": "carbonage:mortar_stone",
-    "count": 1
+    "item": "carbonage:mortar_stone"
   }
 }
