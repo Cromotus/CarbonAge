@@ -31,6 +31,7 @@ import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import projects.cromotus.carbonage.CarbonAge;
 import projects.cromotus.carbonage.data.provider.CarbonAgeBlockTagsProvider;
 import projects.cromotus.carbonage.data.provider.CarbonAgeItemTagsProvider;
+import projects.cromotus.carbonage.data.provider.CarbonAgeLootTableProvider;
 import projects.cromotus.carbonage.data.provider.CarbonAgeRecipeProvider;
 
 @Mod.EventBusSubscriber(modid = CarbonAge.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -42,7 +43,10 @@ public class CarbonAgeDataGenerator {
         if (event.includeServer()){
             generator.addProvider(new CarbonAgeBlockTagsProvider(generator));
             generator.addProvider(new CarbonAgeItemTagsProvider(generator));
+
             generator.addProvider(new CarbonAgeRecipeProvider(generator));
+
+            generator.addProvider(new CarbonAgeLootTableProvider(generator));
         }
     }
 
