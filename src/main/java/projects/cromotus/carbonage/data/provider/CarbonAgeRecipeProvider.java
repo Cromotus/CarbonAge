@@ -50,6 +50,7 @@ public class CarbonAgeRecipeProvider extends RecipeProvider {
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
         //Shaped Recipes
+        //Mortars
         ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.MORTAR_STONE, 1)
                 .patternLine("S")
                 .patternLine("S")
@@ -77,6 +78,7 @@ public class CarbonAgeRecipeProvider extends RecipeProvider {
                 .addCriterion("has_diamond", hasItem(Items.DIAMOND))
                 .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "mortar_diamond"));
 
+        //Crafting Items
         ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.STONE_BOWL, 1)
                 .patternLine("S S")
                 .patternLine("SSS")
@@ -118,6 +120,7 @@ public class CarbonAgeRecipeProvider extends RecipeProvider {
                 .addCriterion("has_mold", hasItem(CarbonAgeItems.MOLD_EMPTY))
                 .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "mold_filled"));
 
+        //Blocks
         ShapedRecipeBuilder.shapedRecipe(CarbonAgeBlocks.CARBON_BLOCK, 4)
                 .patternLine(" C ")
                 .patternLine("CSC")
@@ -136,6 +139,96 @@ public class CarbonAgeRecipeProvider extends RecipeProvider {
                 .addCriterion("has_dense_carbon", hasItem(CarbonAgeItems.DENSE_CARBON_PLATE))
                 .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "dense_carbon_block"));
 
+        //Tools
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.CARBON_PICKAXE, 1)
+                .patternLine("CCC")
+                .patternLine(" S ")
+                .patternLine(" S ")
+                .key('C', CarbonAgeItems.CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "carbon_pickaxe"));
+
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.CARBON_SHOVEL, 1)
+                .patternLine("C")
+                .patternLine("S")
+                .patternLine("S")
+                .key('C', CarbonAgeItems.CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "carbon_shovel"));
+
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.CARBON_AXE, 1)
+                .patternLine("CC ")
+                .patternLine("CS ")
+                .patternLine(" S ")
+                .key('C', CarbonAgeItems.CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "carbon_axe"));
+
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.CARBON_SWORD, 1)
+                .patternLine(" C ")
+                .patternLine(" C ")
+                .patternLine(" S ")
+                .key('C', CarbonAgeItems.CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "carbon_sword"));
+
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.CARBON_HOE, 1)
+                .patternLine("CC ")
+                .patternLine(" S ")
+                .patternLine(" S ")
+                .key('C', CarbonAgeItems.CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "carbon_hoe"));
+
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.DENSE_CARBON_PICKAXE, 1)
+                .patternLine("CCC")
+                .patternLine(" S ")
+                .patternLine(" S ")
+                .key('C', CarbonAgeItems.DENSE_CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.DENSE_CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "dense_carbon_pickaxe"));
+
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.DENSE_CARBON_SHOVEL, 1)
+                .patternLine(" C ")
+                .patternLine(" S ")
+                .patternLine(" S ")
+                .key('C', CarbonAgeItems.DENSE_CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.DENSE_CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "dense_carbon_shovel"));
+
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.DENSE_CARBON_AXE, 1)
+                .patternLine("CC ")
+                .patternLine("CS ")
+                .patternLine(" S ")
+                .key('C', CarbonAgeItems.DENSE_CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.DENSE_CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "dense_carbon_axe"));
+
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.DENSE_CARBON_SWORD, 1)
+                .patternLine(" C ")
+                .patternLine(" C ")
+                .patternLine(" S ")
+                .key('C', CarbonAgeItems.DENSE_CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.DENSE_CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "dense_carbon_sword"));
+
+        ShapedRecipeBuilder.shapedRecipe(CarbonAgeItems.DENSE_CARBON_HOE, 1)
+                .patternLine("CC ")
+                .patternLine(" S ")
+                .patternLine(" S ")
+                .key('C', CarbonAgeItems.DENSE_CARBON_PLATE)
+                .key('s', CarbonAgeItems.IRON_STICK)
+                .addCriterion("has_carbon", hasItem(CarbonAgeItems.DENSE_CARBON_PLATE))
+                .build(consumer, new ResourceLocation(CarbonAge.MOD_ID, "dense_carbon_hoe"));
 
         //Shapeless Recipes
         ShapelessRecipeBuilder.shapelessRecipe(CarbonAgeItems.TINY_COAL_DUST, 1)

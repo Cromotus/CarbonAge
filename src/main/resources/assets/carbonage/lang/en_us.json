@@ -18,6 +18,17 @@
   "item.carbonage.empty_cell": "Empty Cell",
   "item.carbonage.water_cell": "Water Cell",
 
+  "item.carbonage.carbon_pickaxe": "Carbon Pickaxe",
+  "item.carbonage.carbon_axe": "Carbon Axe",
+  "item.carbonage.carbon_shovel": "Carbon Shovel",
+  "item.carbonage.carbon_sword": "Carbon Sword",
+  "item.carbonage.carbon_hoe": "Carbon Hoe",
+  "item.carbonage.dense_carbon_pickaxe": "Dense Carbon Pickaxe",
+  "item.carbonage.dense_carbon_axe": "Dense Carbon Axe",
+  "item.carbonage.dense_carbon_shovel": "Dense Carbon Shovel",
+  "item.carbonage.dense_carbon_sword": "Dense Carbon Sword",
+  "item.carbonage.dense_carbon_hoe": "Dense Carbon Hoe",
+
 
   "block.carbonage.carbon_block": "Carbon Block",
   "block.carbonage.dense_carbon_block": "Dense Carbon Block"

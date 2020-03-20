@@ -24,12 +24,13 @@
 
 package projects.cromotus.carbonage.init;
 
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.IForgeRegistry;
 import projects.cromotus.carbonage.CarbonAge;
+import projects.cromotus.carbonage.item.CarbonAgeItemTier;
 import projects.cromotus.carbonage.item.MortarItem;
 
 @Mod.EventBusSubscriber(modid = CarbonAge.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -43,11 +44,25 @@ public class CarbonAgeItems {
     public static final Item CARBON_MASS = new Item(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
     public static final Item CARBON_PLATE = new Item(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
     public static final Item DENSE_CARBON_PLATE = new Item(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+
     //Tools
     //TODO replace Simultaneous Crafts number with config value
     public static final Item MORTAR_STONE = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1).maxDamage(256), 1);
     public static final Item MORTAR_IRON = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1).maxDamage(1024), 5);
     public static final Item MORTAR_DIAMOND = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1).maxDamage(4096), 10);
+
+    public static final Item CARBON_SWORD = new SwordItem(CarbonAgeItemTier.CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item CARBON_PICKAXE = new PickaxeItem(CarbonAgeItemTier.CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item CARBON_AXE = new AxeItem(CarbonAgeItemTier.CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item CARBON_SHOVEL = new ShovelItem(CarbonAgeItemTier.CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item CARBON_HOE = new HoeItem(CarbonAgeItemTier.CARBON, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+
+    public static final Item DENSE_CARBON_SWORD = new SwordItem(CarbonAgeItemTier.DENSE_CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item DENSE_CARBON_PICKAXE = new PickaxeItem(CarbonAgeItemTier.DENSE_CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item DENSE_CARBON_AXE = new AxeItem(CarbonAgeItemTier.DENSE_CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item DENSE_CARBON_SHOVEL = new ShovelItem(CarbonAgeItemTier.DENSE_CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item DENSE_CARBON_HOE = new HoeItem(CarbonAgeItemTier.DENSE_CARBON, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+
     //Crafting Items
     public static final Item STONE_BOWL = new Item(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
     public static final Item IRON_STICK = new Item(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
@@ -61,15 +76,32 @@ public class CarbonAgeItems {
     public static void registerEvent(RegistryEvent.Register<Item> event){
         final IForgeRegistry<Item> registry = event.getRegistry();
 
+        //Coal/Carbon Related
         registry.register(TINY_COAL_DUST.setRegistryName("tiny_coal_dust"));
         registry.register(COAL_DUST.setRegistryName("coal_dust"));
         registry.register(DENSE_COAL_DUST.setRegistryName("dense_coal_dust"));
         registry.register(CARBON_MASS.setRegistryName("carbon_mass"));
         registry.register(CARBON_PLATE.setRegistryName("carbon_plate"));
         registry.register(DENSE_CARBON_PLATE.setRegistryName("dense_carbon_plate"));
+
+        //Tools
         registry.register(MORTAR_STONE.setRegistryName("mortar_stone"));
         registry.register(MORTAR_IRON.setRegistryName("mortar_iron"));
         registry.register(MORTAR_DIAMOND.setRegistryName("mortar_diamond"));
+
+        registry.register(CARBON_SWORD.setRegistryName("carbon_sword"));
+        registry.register(CARBON_PICKAXE.setRegistryName("carbon_pickaxe"));
+        registry.register(CARBON_AXE.setRegistryName("carbon_axe"));
+        registry.register(CARBON_SHOVEL.setRegistryName("carbon_shovel"));
+        registry.register(CARBON_HOE.setRegistryName("carbon_hoe"));
+
+        registry.register(DENSE_CARBON_SWORD.setRegistryName("dense_carbon_sword"));
+        registry.register(DENSE_CARBON_PICKAXE.setRegistryName("dense_carbon_pickaxe"));
+        registry.register(DENSE_CARBON_AXE.setRegistryName("dense_carbon_axe"));
+        registry.register(DENSE_CARBON_SHOVEL.setRegistryName("dense_carbon_shovel"));
+        registry.register(DENSE_CARBON_HOE.setRegistryName("dense_carbon_hoe"));
+
+        //Crafting Items
         registry.register(STONE_BOWL.setRegistryName("stone_bowl"));
         registry.register(IRON_STICK.setRegistryName("iron_stick"));
         registry.register(MOLD_EMPTY.setRegistryName("mold_empty"));
