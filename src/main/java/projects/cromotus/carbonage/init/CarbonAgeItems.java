@@ -51,17 +51,17 @@ public class CarbonAgeItems {
     public static final Item MORTAR_IRON = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1).maxDamage(1024), 5);
     public static final Item MORTAR_DIAMOND = new MortarItem(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP).maxStackSize(1).maxDamage(4096), 10);
 
-    public static final Item CARBON_SWORD = new SwordItem(CarbonAgeItemTier.CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
-    public static final Item CARBON_PICKAXE = new PickaxeItem(CarbonAgeItemTier.CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
-    public static final Item CARBON_AXE = new AxeItem(CarbonAgeItemTier.CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
-    public static final Item CARBON_SHOVEL = new ShovelItem(CarbonAgeItemTier.CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
-    public static final Item CARBON_HOE = new HoeItem(CarbonAgeItemTier.CARBON, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item CARBON_SWORD = new SwordItem(CarbonAgeItemTier.CARBON, 3, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item CARBON_PICKAXE = new PickaxeItem(CarbonAgeItemTier.CARBON, 1, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item CARBON_AXE = new AxeItem(CarbonAgeItemTier.CARBON, 5, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item CARBON_SHOVEL = new ShovelItem(CarbonAgeItemTier.CARBON, 1.5f, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item CARBON_HOE = new HoeItem(CarbonAgeItemTier.CARBON, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
 
-    public static final Item DENSE_CARBON_SWORD = new SwordItem(CarbonAgeItemTier.DENSE_CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
-    public static final Item DENSE_CARBON_PICKAXE = new PickaxeItem(CarbonAgeItemTier.DENSE_CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
-    public static final Item DENSE_CARBON_AXE = new AxeItem(CarbonAgeItemTier.DENSE_CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
-    public static final Item DENSE_CARBON_SHOVEL = new ShovelItem(CarbonAgeItemTier.DENSE_CARBON, 1, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
-    public static final Item DENSE_CARBON_HOE = new HoeItem(CarbonAgeItemTier.DENSE_CARBON, 5f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item DENSE_CARBON_SWORD = new SwordItem(CarbonAgeItemTier.DENSE_CARBON, 4, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item DENSE_CARBON_PICKAXE = new PickaxeItem(CarbonAgeItemTier.DENSE_CARBON, 1, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item DENSE_CARBON_AXE = new AxeItem(CarbonAgeItemTier.DENSE_CARBON, 5, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item DENSE_CARBON_SHOVEL = new ShovelItem(CarbonAgeItemTier.DENSE_CARBON, 1.5f, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
+    public static final Item DENSE_CARBON_HOE = new HoeItem(CarbonAgeItemTier.DENSE_CARBON, 0f, new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));
 
     //Crafting Items
     public static final Item STONE_BOWL = new Item(new Item.Properties().group(CarbonAgeItemGroups.MAIN_GROUP));

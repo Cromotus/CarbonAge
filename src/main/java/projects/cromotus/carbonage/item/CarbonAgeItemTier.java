@@ -31,17 +31,17 @@ import projects.cromotus.carbonage.init.CarbonAgeItems;
 
 public enum CarbonAgeItemTier implements IItemTier {
 
-    CARBON(10f, 9f, 800, 3, 25, CarbonAgeItems.CARBON_PLATE),
-    DENSE_CARBON(10f, 9f, 1600, 3, 25, CarbonAgeItems.DENSE_CARBON_PLATE);
+    CARBON(3, 1623, 10.0f, 4.0f, 18, CarbonAgeItems.CARBON_PLATE),
+    DENSE_CARBON(3, 2435, 12.0f, 5.0f, 24, CarbonAgeItems.DENSE_CARBON_PLATE);
 
     private float attackDamage, efficiency;
-    private int durability, harvestLevel, enchantability;
+    private int maxUses, harvestLevel, enchantability;
     private Item repairMaterial;
 
-    private CarbonAgeItemTier(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, Item repairMaterial) {
+    private CarbonAgeItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Item repairMaterial) {
         this.attackDamage = attackDamage;
         this.efficiency = efficiency;
-        this.durability = durability;
+        this.maxUses = maxUses;
         this.harvestLevel = harvestLevel;
         this.enchantability = enchantability;
         this.repairMaterial = repairMaterial;
@@ -49,7 +49,7 @@ public enum CarbonAgeItemTier implements IItemTier {
 
     @Override
     public int getMaxUses() {
-        return this.durability;
+        return this.maxUses;
     }
 
     @Override
